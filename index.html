@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/snake2.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Snake Game</title>
+</head>
+
+<body>
+
+    <!-- Jeu de serpent -->
+    <div class="game-container">
+        <h1>Snake Game</h1>
+
+        <select id="difficulty">
+            <option value="easy">
+                Facile
+            </option>
+
+            <option value="medium">
+                Moyen
+            </option>
+
+            <option value="hard">
+                Difficile
+            </option>
+        </select>
+
+
+        <div id="score">Score : 0</div>
+        <div id="bestScore">Meilleur score : 0</div>
+        <div id="countdown">3</div>
+
+        <div class="canvas-container">
+
+            <button id="pauseBtn" onclick="togglePause()">
+                ⏸
+            </button>
+
+            <canvas id="game" width="400" height="400"></canvas>
+
+        </div>
+        <button class="game-btn" onclick="restartGame()">
+            Rejouer
+        </button>
+
+
+        <!-- Fenêtre Game Over -->
+        <div id="gameOverModal">
+            <div class="modal-content">
+                <h2>Game Over</h2>
+                <p id="finalScore"></p>
+                <button class="modal-btn" onclick="restartGame()">
+                    Rejouer
+                </button>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+
+</body>
+
+</html>
